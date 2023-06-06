@@ -1,8 +1,10 @@
+import { Label, Input } from './Filter.styled';
+
 export default function Filter({ filterContact }) {
   return (
-    <label>
+    <Label>
       Find contacts by name
-      <input type="text" onChange={filterContact} />
-    </label>
+      <Input type="text" onChange={filterContact} />
+    </Label>
   );
 }

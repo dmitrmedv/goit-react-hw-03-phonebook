@@ -1,17 +1,20 @@
+import { Ul, Li, Button } from './ContactList.styled';
+
 export default function ContactList({ contacts, deleteContact }) {
   return (
-    <ul>
+    <Ul>
       {contacts.map(({ id, name, number }) => {
         return (
-          <li key={id}>
-            <p>{name}</p>
-            <p>{number}</p>
-            <button type="button" onClick={() => deleteContact(id)}>
+          <Li key={id}>
+            <p>
+              {name}: {number}
+            </p>
+            <Button type="button" onClick={() => deleteContact(id)}>
               Delete
-            </button>
-          </li>
+            </Button>
+          </Li>
         );
       })}
-    </ul>
+    </Ul>
   );
 }
