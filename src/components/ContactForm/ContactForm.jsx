@@ -14,7 +14,7 @@ class ContactForm extends Component {
   setData = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value.trim(),
+      [name]: value,
     });
   };
 
